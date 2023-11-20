@@ -7,7 +7,7 @@ Building a credible fault diagnosis framework, for critical mechanical component
 </p>
 
 <div align=center>
-<img src="figs/framework_illustration_v2.pdf" width="800">
+<img src="[figs](https://github.com/fyancy/ProMo/tree/main/figs/framework_illustration_v2.pdf" width="800">
 </div>
 <p align="justify">
 Fig. 1. Overview of the proposed reliable probabilistic fault diagnosis framework. The first row shows the pipeline of the method, and the second presents the two main innovations of this article. The InD and OOD data collected from different devices are input into a Bayesian model to obtain the basic features, the predictions are generated through hierarchical classifiers and Monte Carlo estimation (not shown), and finally reliable diagnosis and OOD detection results are obtained through uncertainty estimation and probability null space analysis.
