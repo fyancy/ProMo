@@ -7,7 +7,7 @@ Building a credible fault diagnosis framework, for critical mechanical component
 </p>
 
 <div align=center>
-<img src="figs/img/framework_illustration_v2.pdf" width="800">
+<img src="figs/framework_illustration_v2.pdf" width="800">
 </div>
 <p align="justify">
 Fig. 1. Overview of the proposed reliable probabilistic fault diagnosis framework. The first row shows the pipeline of the method, and the second presents the two main innovations of this article. The InD and OOD data collected from different devices are input into a Bayesian model to obtain the basic features, the predictions are generated through hierarchical classifiers and Monte Carlo estimation (not shown), and finally reliable diagnosis and OOD detection results are obtained through uncertainty estimation and probability null space analysis.
@@ -17,4 +17,4 @@ Fig. 1. Overview of the proposed reliable probabilistic fault diagnosis framewor
 The backbone of the proposed approach is a fully Bayesian deep network. As depicted in Fig. 2, the proposed method integrates misidentification and OOD detection in a unified end-to-end framework, in which two tools are given (PNuSA score and MC uncertainty). Uncertainty estimation and OOD scores evaluate the model uncertainty from different aspects, and do not serve as training objectives and thus can be plugand-play. The core challenge is how to construct a Bayesian model sensitive to OOD samples and meanwhile retain good identification ability. In ProMo, a hierarchical structure is presented, uncertainty can be collected from multi-level classifiers, OOD score is computed via weight distributions of classifiers, and prediction accuracy is significantly enhanced via MC estimation over the proposed probabilistic model.
 
 For feature reparameterization, 
-$$\mathbf{h}^{(l)}{(i,j,k)}=\mathbf{h}^{(l)}_{\mu}{(i,j,k)}+\epsilon(i,j,k) \mathbf{h}^{(l)}_{\sigma}{(i,j,k)}$$
+$$ \mathbf{h}^{(l)}{(i,j,k)}=\mathbf{h}^{(l)}_{\mu}{(i,j,k)}+\epsilon(i,j,k) \mathbf{h}^{(l)}_{\sigma}{(i,j,k)} $$
