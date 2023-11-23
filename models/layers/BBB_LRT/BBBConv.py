@@ -13,7 +13,7 @@ import torch.nn.functional as F
 from torch.nn import Parameter
 from torch.nn.modules.utils import _single
 
-from utils.metrics import calculate_kl as KL_DIV
+from ..metrics import calculate_kl as KL_DIV
 # import config_bayesian as cfg
 from ..misc import ModuleWrapper
 

@@ -26,7 +26,7 @@ def ood_score_dist(train_score, ind_score, ood_score, title, fig_save=False):
 
     # plt.ylim([0, 30])
     # plt.tight_layout()
-    path = fr"E:\桌面\MyWork\贝叶斯深度学习\实验图\{title}.pdf"
+    path = fr"...\{title}.pdf"
     if not os.path.exists(path) and fig_save:
         print(f"Save fig at \n {path}")
         plt.savefig(path, bbox_inches='tight')
@@ -64,7 +64,7 @@ def pred_ood_dist(pred_unc_ind, pred_unc_ood, ind_score, ood_score, title, fig_s
     # grid._legend.remove()
 
     # plt.ylim([0, 30])
-    path = fr"E:\桌面\MyWork\贝叶斯深度学习\实验图\{title}.pdf"
+    path = fr"...\{title}.pdf"
     if not os.path.exists(path) and fig_save:
         print(f"Save fig at \n {path}")
         plt.savefig(path, bbox_inches='tight')
@@ -89,12 +89,6 @@ def wrong_right_dist(wrong_score, right_score, title, fig_save=False):
     sns.kdeplot(right_score, fill=True, label="right", bw_adjust=bw)
     plt.legend(loc='upper right')
     plt.title(title)
-    # plt.ylim([0, 5])
-    # plt.tight_layout()
-    # path = fr"E:\桌面\MyWork\贝叶斯深度学习\实验图\{title}.pdf"
-    # if not os.path.exists(path) and fig_save:
-    #     print(f"Save fig at \n {path}")
-    #     plt.savefig(path, bbox_inches='tight')
     plt.show()
 
 
@@ -116,12 +110,6 @@ def wrong_right_train_dist(wrong_score, right_score, train_score, title, fig_sav
     sns.kdeplot(train_score, fill=True, label="train", bw_adjust=bw)
     plt.legend(loc='upper right')
     plt.title(title)
-    # plt.ylim([0, 5])
-    # plt.tight_layout()
-    # path = fr"E:\桌面\MyWork\贝叶斯深度学习\实验图\{title}.pdf"
-    # if not os.path.exists(path) and fig_save:
-    #     print(f"Save fig at \n {path}")
-    #     plt.savefig(path, bbox_inches='tight')
     plt.show()
 
 
@@ -132,6 +120,7 @@ def wrong_right_train_ind_dist(wrong_score, right_score, train_score, train95_sc
     plt.rc('font', family='Arial', weight='normal', size=8)
     plt.rc('lines', markersize=5)
 
+    # just normalize:
     # s_min = min(min(wrong_score), min(right_score)) - 0.05
     # s_max = max(max(np.abs(wrong_score)), max(np.abs(right_score)))
     # wrong_score, right_score = (wrong_score - s_min) / s_max, (right_score - s_min) / s_max
@@ -147,11 +136,6 @@ def wrong_right_train_ind_dist(wrong_score, right_score, train_score, train95_sc
     plt.legend(loc='upper right')
     # plt.title("Ind_Wrong_Right_OOD")
     plt.title(title)
-    # plt.title("Train_Wrong_Right_OOD")
-    # plt.ylim([0, 5])
-    # plt.tight_layout()
-    # path = fr"E:\桌面\MyWork\贝叶斯深度学习\实验图\{title}.pdf"
-    # path = fr"C:\Users\asus\Desktop\MyWork\贝叶斯深度学习\实验图\exp4\{title}.pdf"
     if fig_path:
         if not os.path.exists(fig_path):
             print(f"Save fig at \n {fig_path}")

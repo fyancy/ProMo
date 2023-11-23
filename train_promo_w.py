@@ -125,9 +125,9 @@ class BCNNTrainer(BaseCNNTrainer):
             score_ood = epi_ood
             score_ind = epi_ind
             if self.exp_num == 3:
-                path = rf"E:\fy_works\save_model\bcnn\discussion\ind_ood_scores\exp3\promoW_unc"
+                path = rf"..."
             elif self.exp_num == 4:
-                path = rf"E:\fy_works\save_model\bcnn\discussion\ind_ood_scores\exp4\promoW_unc"
+                path = rf"..."
             save_curve_and_plot(y_ood, score_ood, score_ind, unc_mode=True, score_save_path=path)
 
         # ********** obtain weight score ***********

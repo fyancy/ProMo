@@ -380,7 +380,7 @@ class BaseCNNTrainer:
             wrong_right_thre = np.percentile(train_score, 5)
             train_95 = train_score[train_score > wrong_right_thre]
 
-        wrong_right_train_ind_dist(ind_wrong, ind_right, train_score, train_95, ood, title, fig_save=self.SaveFigure)
+        wrong_right_train_ind_dist(ind_wrong, ind_right, train_score, train_95, ood, title)
 
 
 if __name__ == "__main__":
@@ -388,19 +388,19 @@ if __name__ == "__main__":
     ood_fns = ["energy", "vim", "nusa",
                "mahalanobis", "residual", "kl_matching", "msp"]  # "energy_react"-->energy
     # Exp4:
-    trainer = BaseCNNTrainer(exp_num=4, figure_save=False, ood_detect_single_cls=False)
-    trainer.score_fn_name = ood_fns[0]
+    # trainer = BaseCNNTrainer(exp_num=4, figure_save=False, ood_detect_single_cls=False)
+    # trainer.score_fn_name = ood_fns[0]
     # trainer.train(model_dir)
-    load_pt = os.path.join(model_dir, r"Exp4_ConvNet1_ep100.pth")
-    trainer.ood_test_offline(load_pt)
+    # load_pt = os.path.join(model_dir, r"Exp4_ConvNet1_ep100.pth")
+    # trainer.ood_test_offline(load_pt)
 
     # # # Exp=2, 3:
-    # trainer = BaseCNNTrainer(exp_num=3, figure_save=False, ood_detect_single_cls=False)
-    # trainer.score_fn_name = ood_fns[1]
-    # # 1) train:
+    trainer = BaseCNNTrainer(exp_num=3, figure_save=False, ood_detect_single_cls=False)
+    trainer.score_fn_name = ood_fns[1]
+    # 1) train:
     # trainer.train(model_dir)
 
     # # 2) test:
-    # # load_pt = os.path.join(model_dir, r"Exp2_ConvNet1_ep15.pth")
-    # # # load_pt = os.path.join(model_dir, r"Exp4_ConvNet1_ep100.pth")
-    # # trainer.ood_test_offline(load_pt)
+    # load_pt = os.path.join(model_dir, r"Exp2_ConvNet1_ep15.pth")
+    load_pt = os.path.join(model_dir, r"Exp3_ConvNet1_ep20.pth")
+    trainer.ood_test_offline(load_pt)
