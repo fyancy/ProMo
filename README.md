@@ -1,5 +1,5 @@
 # ProMo
-A Bayesian Probabilistic Framework for Mechanical Fault Diagnosis
+A Bayesian Probabilistic Framework for Mechanical Fault Diagnosis. The codes for ("Integrating Misidentification and OOD Detection for Reliable Fault Diagnosis of High-Speed Train Bogie")[https://ieeexplore.ieee.org/document/10480918]
 
 ## Abstract
 <p align="justify">
