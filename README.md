@@ -1,5 +1,5 @@
 # ProMo
-A Bayesian Probabilistic Framework for Mechanical Fault Diagnosis. The codes for ("Integrating Misidentification and OOD Detection for Reliable Fault Diagnosis of High-Speed Train Bogie")[https://ieeexplore.ieee.org/document/10480918]
+A Bayesian Probabilistic Framework for Mechanical Fault Diagnosis. The codes for ["Integrating Misidentification and OOD Detection for Reliable Fault Diagnosis of High-Speed Train Bogie"](https://ieeexplore.ieee.org/document/10480918).
 
 ## Abstract
 <p align="justify">
@@ -19,3 +19,18 @@ The backbone of the proposed approach is a fully Bayesian deep network. As depic
 </p>
 
 The detailed structure is put in ``models.py``. You could modify it to run on your constructed dataset.
+
+## Citation
+If you use our codes in your work, please cite it as
+```
+@article{feng2024integrating,
+  author={Feng, Yong and Chen, Jinglong and Xie, Zongliang and Xie, Jingsong and Pan, Tongyang and Li, Chao and Zhao, Qing},
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={Integrating Misidentification and OOD Detection for Reliable Fault Diagnosis of High-Speed Train Bogie}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-11},
+  keywords={Uncertainty;Reliability;Fault diagnosis;Bayes methods;Probabilistic logic;Predictive models;Data models;Fault diagnosis;high-speed train bogie;Bayesian learning;out-of-distribution detection;uncertainty estimation},
+  doi={10.1109/TITS.2024.3377813}}
+```
